@@ -6,19 +6,29 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "migration:generate": "npx drizzle-kit generate:pg",
+    "migration:push": "npx drizzle-kit push:pg",
+    "migration:pull": "npx drizzle-kit introspect:pg",
+    "migration:drop": "npx drizzle-kit drop"
   },
   "dependencies": {
+    "@vercel/postgres": "^0.5.1",
+    "bootstrap": "^5.3.2",
+    "dotenv": "^16.3.1",
+    "drizzle-orm": "^0.28.6",
+    "next": "13.5.6",
     "react": "^18",
     "react-dom": "^18",
-    "next": "13.5.6"
+    "sass": "^1.69.5"
   },
   "devDependencies": {
-    "typescript": "^5",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
+    "drizzle-kit": "^0.19.13",
     "eslint": "^8",
-    "eslint-config-next": "13.5.6"
+    "eslint-config-next": "13.5.6",
+    "typescript": "^5"
   }
 }
