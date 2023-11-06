@@ -5,7 +5,7 @@ export const token = pgTable("token", {
   id: serial("id").primaryKey(),
   passwordResetToken: text("password_reset_token"),
   passwordResetExpires: timestamp("password_reset_expires"),
-  userId: integer("user_jd").references(() => user.id),
+  userId: integer("user_id").references(() => user.id, { onDelete: "cascade" }),
   createdAt: timestamp("created_at"),
 });
 

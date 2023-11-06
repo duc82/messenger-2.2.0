@@ -3,5 +3,11 @@ export default function AuthLayout({
 }: {
   children: React.ReactNode;
 }) {
-  return <div className="container d-flex vh-100">{children}</div>;
+  return (
+    <div className="container">
+      <div className="row vh-100 align-items-center justify-content-center">
+        {children}
+      </div>
+    </div>
+  );
 }

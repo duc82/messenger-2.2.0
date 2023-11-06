@@ -1,1 +1,40 @@
+@import "bootstrap/scss/functions";
+@import "bootstrap/scss/variables";
+@import "bootstrap/scss/variables-dark";
+@import "bootstrap/scss/maps";
+@import "bootstrap/scss/mixins";
+@import "bootstrap/scss/root";
 
+:root {
+  --bs-light-rgb: 246, 249, 251;
+}
+
+$bg-darker: rgb(26, 29, 33);
+
+// Trình duyệt thay đổi chủ đề
+@include color-scheme(light) {
+  .bg-dark-mode {
+    background-color: var(--bs-light-rgb) !important;
+  }
+}
+
+@include color-scheme(dark) {
+  .bg-dark-mode {
+    background-color: $bg-darker;
+  }
+}
+
+$color-mode-type: data;
+
+// [data-bs-theme] ở html thay đổi
+@include color-mode(light) {
+  .bg-dark-mode {
+    background-color: $light;
+  }
+}
+
+@include color-mode(dark) {
+  .bg-dark-mode {
+    background-color: $bg-darker;
+  }
+}
