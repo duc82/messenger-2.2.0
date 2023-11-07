@@ -5,16 +5,18 @@
 @import "bootstrap/scss/mixins";
 @import "bootstrap/scss/root";
 
-:root {
-  --bs-light-rgb: 246, 249, 251;
-}
+$light: rgb(246, 249, 251);
 
 $bg-darker: rgb(26, 29, 33);
+
+.bg-light {
+  background-color: $light;
+}
 
 // Trình duyệt thay đổi chủ đề
 @include color-scheme(light) {
   .bg-dark-mode {
-    background-color: var(--bs-light-rgb) !important;
+    background-color: $light;
   }
 }
 
